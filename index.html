@@ -38,18 +38,18 @@
     <main id="main-doc">
     <section id="what_is_css?" class="main-section">
         <header>
-        <h1>What is CSS?</h1>
+            <h1>What is CSS?</h1>
         </header>
         <article>
         <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.</p>
         <table class="table">
             <tr>
-            <td>Prerequisites:</td>
-            <td>Basic computer literacy, basic software installed, basic knowledge of working with files, and HTML basics (study Introduction to HTML.)</td>
+                <td class="table-header">Prerequisites:</td>
+                <td>Basic computer literacy, basic software installed, basic knowledge of working with files, and HTML basics (study Introduction to HTML.)</td>
             </tr>
             <tr>
-            <td>Objective:</td>
-            <td>To learn what CSS is.</td>
+                <td class="table-header">Objective:</td>
+                <td>To learn what CSS is.</td>
             </tr>
         </table>
         <p>In the Introduction to HTML module we covered what HTML is, and how it is used to mark up documents. These documents will be readable in a web browser. Headings will look larger than regular text, paragraphs break onto a new line and have space between them. Links are colored and underlined to distinguish them from the rest of the text. What you are seeing is the browser's default styles — very basic styles that the browser applies to HTML to make sure it will be basically readable even if no explicit styling is specified by the author of the page.</p>
@@ -76,6 +76,8 @@
         </article>
     </section>
 
+    <div class="section-divider"></div>
+    
     <section id="what_is_css_for?" class="main-section">
         <header>
         <h2>What is CSS for?</h2>
@@ -89,45 +91,49 @@
         </article>
     </section>
 
+    <div class="section-divider"></div>
+    
     <section id="css_syntax" class="main-section">
         <header>
-        <h2>CSS syntax</h2>
+            <h2>CSS syntax</h2>
         </header>
         <article>
-        <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."</p>
-        <p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
-        <p>
-        <pre>
-            <code>
-                h1 {
-                    color: red;
-                    font-size: 5em;
-                }
-            </code>
-        </pre>
-        </p>
-        <p>The rule opens with a selector . This selects the HTML element that we are going to style. In this case we are styling level one headings (<code>&lt;h1&gt;</code>).</p>
-        <p>We then have a set of curly braces <code>{ }</code>. Inside those will be one or more declarations, which take the form of property and value pairs. Each pair specifies a property of the element(s) we are selecting, then a value that we'd like to give the property.</p>
-        <p>Before the colon, we have the property, and after the colon, the value. CSS properties have different allowable values, depending on which property is being specified. In our example, we have the <code>color</code> property, which can take various color values. We also have the <code>font-size</code> property. This property can take various size units as a value.</p>
-        <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
-        <p>
-        <pre>
-            <code>
-                h1 {
-                    color: red;
-                    font-size: 5em;
-                }
-
-                p {
-                    color: black;
-                }
-                </code>
-            </pre>
-        </p>
-        <p>You will find that you quickly learn some values, whereas others you will need to look up. The individual property pages on MDN give you a quick way to look up properties and their values when you forget, or want to know what else you can use as a value.</p>
-        <p>Note: You can find links to all the CSS property pages (along with other CSS features) listed on the MDN CSS reference. Alternatively, you should get used to searching for "mdn css-feature-name" in your favorite search engine whenever you need to find out more information about a CSS feature. For example, try searching for "mdn color" and "mdn font-size"!</p>
+            <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."</p>
+            <p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+            <p>
+                <pre>
+                    <code>
+                        <span class="css-selector">h1</span> {
+                            <span class="css-property">color</span>: <span class="css-value">red</span>;
+                            <span class="css-property">font-size</span>: <span class="css-value">5em</span>;
+                        }
+                    </code>
+                </pre>
+            </p>
+            <p>The rule opens with a selector . This selects the HTML element that we are going to style. In this case we are styling level one headings (<code>&lt;h1&gt;</code>).</p>
+            <p>We then have a set of curly braces <code>{ }</code>. Inside those will be one or more declarations, which take the form of property and value pairs. Each pair specifies a property of the element(s) we are selecting, then a value that we'd like to give the property.</p>
+            <p>Before the colon, we have the property, and after the colon, the value. CSS properties have different allowable values, depending on which property is being specified. In our example, we have the <code>color</code> property, which can take various color values. We also have the <code>font-size</code> property. This property can take various size units as a value.</p>
+            <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
+            <p>
+                <pre>
+                    <code>
+                        <span class="css-selector">h1</span> {
+                            <span class="css-property">color</span>: <span class="css-value">red</span>;
+                            <span class="css-property">font-size</span>: <span class="css-value">5em</span>;
+                        }
+                        
+                        <span class="css-selector">p</span> {
+                            <span class="css-property">color</span>: <span class="css-value">black</span>;
+                        }
+                    </code>
+                </pre>
+            </p>
+            <p>You will find that you quickly learn some values, whereas others you will need to look up. The individual property pages on MDN give you a quick way to look up properties and their values when you forget, or want to know what else you can use as a value.</p>
+            <p>Note: You can find links to all the CSS property pages (along with other CSS features) listed on the MDN CSS reference. Alternatively, you should get used to searching for "mdn css-feature-name" in your favorite search engine whenever you need to find out more information about a CSS feature. For example, try searching for "mdn color" and "mdn font-size"!</p>
         </article>
     </section>
+    
+    <div class="section-divider"></div>
 
     <section id="css_modules" class="main-section">
         <header>
@@ -149,6 +155,8 @@
         </article>
     </section>
 
+    <div class="section-divider"></div>
+
     <section id="browser_support_information" class="main-section">
         <header>
         <h2>Browser support information</h2>
@@ -159,6 +167,8 @@
         </article>
     </section>
 
+    <div class="section-divider"></div>
+    
     <section id="what's_next?" class="main-section">
         <header>
         <h2>What's next?</h2>
@@ -167,6 +177,9 @@
         <p>Now that you have some understanding of what CSS is, let's move on to Getting started with CSS, where you can start to write some CSS yourself.</p>
         </article>
     </section>
+
+    <div class="section-divider"></div>
+
     </main>
 </body>
 </html>

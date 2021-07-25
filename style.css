@@ -1,41 +1,76 @@
+/*== BASES ==*/
 *{
     margin: 0;
     border: 0;
     box-sizing: border-box;
+}
+
+html{
     font-size: 10px;
 }
 
+:root{
+    --text-size: 1.6rem;
+    --title-size: 3.2rem;
+    --subtitle-size: 2.2rem;
+    --subsubtitle-size: 2rem;
+
+    --text-color: #73687D;
+    --title-color: black;
+    --link-color: #66517A;
+}
+
+a{
+    color: var(--link-color);
+}
+
 section{
-    margin-bottom: 1.5rem;
+    padding: 2rem 0.7rem;
 }
 
-.table{
-    margin: 1px solid black;
-    font-size: 1.6rem;
+h1, h2, h3{
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
 }
 
-/* .flex{
-    display: flex;
-} */
+p, table, li{
+    font-size: var(--text-size);
+    color: var(--text-color);
+}
+
+p{
+    line-height: 2rem;
+    padding: 0.15rem;
+}
+
+code{
+    font-size: var(--text-size);
+    background-color: lightgray;
+}
+
+.section-divider{
+    height: 1px;
+    width: 100%;
+    background: black;
+}
 
 
-/*== Navbar ==*/
-
+/*== NAV ==*/
 #navbar{
     position: fixed;
     background: white;
     border: 1px solid black;
     height: 100%;
-    width: 20%;
+    width: fit-content;
 }
 
 #navbar header{
-    font-size: 3rem;
+    font-size: var(--subtitle-size);
 }
 
 #linkrol a{
     display: block;
-    font-size: 2rem;
+    font-size: var(--text-size);
     text-align: center;
     padding: 1rem;
 }
@@ -47,51 +82,63 @@ section{
 }
 
 
-/*== Main ==*/
-main{
-    margin: 0 3rem;
-    padding-left: 20%;
+/*== MAIN ==*/
+#main-doc{
+    margin-left: 16%;
 }
 
-main section h1{
-    font-size: 2.5rem;
-    font-style: bold;
+header h1{
+    font-size: var(--title-size);
 }
 
-main section h2{
-    font-size: 2rem;
-    font-size: bold;
+main h2{
+    font-size: var(--subtitle-size);
 }
 
-main section p{
-    font-size: 1.6rem;
+main h3{
+    font-size: var(--subsubtitle-size);
 }
 
-/* == Media Queries ==
+main .table{
+    width: fit-content;
+    margin: 2rem auto;
+}
 
-@media(max-width: 600px){
-    #navbar{
-        position: fixed;
-        width: 100%;
-        height: fit-content;
-    }
+main .table, main .table tr, main .table td{
+    border: 2px solid #73687D;
+    border-collapse: collapse;
+    padding: 0.3rem;
+}
 
-    #linkrol{
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-    }
+main .table-header{
+    background: lightgray;
+}
 
-    #linkrol a{
-        border: 1px solid black;
-        padding: 10px;
-    }
+ul, ol{
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+}
 
-    main{
-        padding-left: 0;
-        padding-top: 30%;
-    }
-} */
+iframe{
+    display: block;
+    margin: 2rem auto;
+}
+
+pre{
+    background-color: lightgray;
+    margin: 1rem 0; 
+    border-radius: 0 15px 15px 0;
+    width: 70%;
+}
+
+pre code .css-selector{
+    color: darkgreen;
+}
+
+pre code .css-property{
+    color: darkred;
+}
+
+pre code .css-value{
+    color: var(--text-color);
+}
