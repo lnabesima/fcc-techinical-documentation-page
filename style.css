@@ -142,3 +142,51 @@ pre code .css-property{
 pre code .css-value{
     color: var(--text-color);
 }
+
+/*== Media Queries ==*/
+@media(max-width: 480px){
+
+:root{
+    --text-size: 1rem;
+    --title-size: 2rem;
+    --subtitle-size: 1.8rem;
+    --subsubtitle-size: 1.3rem;
+
+    --text-color: #73687D;
+    --title-color: black;
+    --link-color: #66517A;
+}
+
+    #navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: fit-content;
+        z-index: 9999;
+    }
+
+    .navbar-divider{
+        display: none;
+    }
+
+    #linkrol{
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        gap: 0;
+    }
+
+    #linkrol a{
+        font-size: var(--text-size);
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    #main-doc{
+        margin-left: 2%;
+    }
+
+    section{
+        padding: 7rem 0.5rem;
+    }
+}
